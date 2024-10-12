@@ -3,63 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dinesh's SOC Analyst Resume">
-    <title>Dinesh M - SOC Analyst Resume</title>
+    <title>Dinesh M | SOC Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
             color: #333;
         }
         header {
-            background-color: #00274d;
+            background-color: #0d2538;
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
         header h1 {
-            font-size: 50px;
-            margin: 0;
+            font-size: 40px;
         }
-        header h3 {
-            font-size: 24px;
-            margin: 10px 0;
+        header p {
+            font-size: 20px;
         }
-        .container {
+        nav {
+            background-color: #0d2538;
+            padding: 15px 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        section {
+            padding: 60px 20px;
             max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
         }
         h2 {
-            color: #004aad;
-            border-bottom: 2px solid #004aad;
-            padding-bottom: 5px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        .section {
+            text-align: center;
+            font-size: 36px;
             margin-bottom: 40px;
+            color: #0d2538;
+            text-transform: uppercase;
         }
-        .contact-info, .social {
-            margin: 10px 0;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
-        .contact-info p, .social a {
-            margin: 5px 0;
+        .content-box {
+            width: 45%;
+            margin-bottom: 40px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .content-box h3 {
+            color: #0d2538;
+            margin-bottom: 15px;
         }
         footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #00274d;
+            background-color: #0d2538;
             color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -67,93 +93,92 @@
 
     <header>
         <h1>Dinesh M</h1>
-        <h3>SOC Analyst | Cyber Security Professional</h3>
+        <p>SOC Analyst | Cybersecurity Specialist</p>
     </header>
 
-    <div class="container">
-        <section class="section">
-            <h2>Profile</h2>
-            <p>
-                Insightful SOC Analyst recognized for high productivity and efficient task completion. 
-                Possess specialized skills in threat intelligence analysis, incident response, 
-                and security information and event management (SIEM) tools proficiency. 
-                Excel in critical thinking, problem-solving, and communication, ensuring peak performance 
-                in identifying and mitigating cyber threats.
-            </p>
-        </section>
+    <nav>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certification">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <section class="section">
-            <h2>Experience</h2>
-            <h3>QO SOC Analyst - DigitalTrack Solutions | 2023 - Present</h3>
-            <ul>
-                <li>Monitored network traffic for suspicious activity using SIEM tools such as AlienVault, Wazuh, and Helix.</li>
-                <li>Analyzed logs from various sources, including Trellix EDR, Trellix Email gateway security, and Radware WAF.</li>
-                <li>Identified security threats, vulnerabilities, and potential malicious activities through log analysis.</li>
-                <li>Collaborated with internal teams to improve system performance and enhance overall security posture.</li>
-                <li>Performed incident response and root cause analysis on security incidents.</li>
-            </ul>
-            <h3>Network Engineer Intern | Aug 2022 - Dec 2022</h3>
-            <ul>
-                <li>Gained hands-on experience with networking equipment, including switches, routers, firewalls, and load balancers.</li>
-                <li>Worked on firewall configuration and security measures.</li>
-                <li>Implemented network address translation (NAT) and DNS services.</li>
-                <li>Maintained VPNs for secure remote access.</li>
-                <li>Monitored network performance to ensure system availability for users.</li>
-            </ul>
-        </section>
+    <section id="profile">
+        <h2>Profile</h2>
+        <div class="container">
+            <div class="content-box">
+                <h3>Professional Summary</h3>
+                <p>Experienced SOC Analyst with expertise in threat intelligence, incident response, and SIEM tools (AlienVault, Wazuh, Helix). Proven ability to analyze and interpret security logs, identifying and mitigating security threats for effective system protection.</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>Education</h2>
-            <p>B.Sc Networking | 2019 - 2022</p>
-        </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="container">
+            <div class="content-box">
+                <h3>Technical Skills</h3>
+                <p>SIEM: AlienVault, Wazuh | Incident Response | Threat Intelligence | Log Analysis | Vulnerability Assessment | Network Security | Cybersecurity Frameworks.</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>SIEM Tools - AlienVault, Wazuh</li>
-                <li>Incident Response</li>
-                <li>Log Analysis</li>
-                <li>Phishing Email Investigation</li>
-                <li>Malware Analysis</li>
-                <li>Vulnerability Assessment</li>
-                <li>Network Security</li>
-                <li>Cyber Security Frameworks</li>
-            </ul>
-        </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="container">
+            <div class="content-box">
+                <h3>SOC Analyst - DigitalTrack Solutions</h3>
+                <p>2023 - Present</p>
+                <ul>
+                    <li>Monitored network traffic and analyzed logs for potential security threats.</li>
+                    <li>Investigated incidents involving malware, phishing, and unauthorized access.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>Languages</h2>
-            <ul>
-                <li>English</li>
-                <li>Tamil</li>
-            </ul>
-        </section>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="container">
+            <div class="content-box">
+                <h3>B.Sc Networking</h3>
+                <p>2019 - 2022 | XYZ University</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>Certificates</h2>
-            <ul>
-                <li>NSE1 & NSE2 Network Security Associate (Fortinet)</li>
-                <li>International Cyber Security Institute Certified (ICSI)</li>
-                <li>Digital Forensics Essentials (EC-Council)</li>
-                <li>Certified Ethical Hacker (CEH - EC-Council)</li>
-            </ul>
-        </section>
+    <section id="certification">
+        <h2>Certifications</h2>
+        <div class="container">
+            <div class="content-box">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>Certified Ethical Hacker (CEH - EC-Council)</li>
+                    <li>NSE1 & NSE2 Network Security Associate (Fortinet)</li>
+                    <li>International Cybersecurity Institute Certified (ICSI)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>Contact</h2>
-            <div class="contact-info">
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="container">
+            <div class="content-box">
+                <h3>Contact Information</h3>
+                <p>Email: <a href="mailto:dineshm2114@gmail.com">dineshm2114@gmail.com</a></p>
                 <p>Phone: +91 7092388308</p>
-                <p>Email: dineshm2114@gmail.com</p>
-                <p>Address: No. 40, Arumugamnagar, Avaniyapuram, Madurai - 12</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/dinesh-m-13ab08283" target="_blank">linkedin.com/in/dinesh-m-13ab08283</a></p>
             </div>
-            <div class="social">
-                <a href="https://www.linkedin.com/in/dinesh-m-13ab08283">LinkedIn: Dinesh M</a>
-            </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Dinesh M | SOC Analyst | Cyber Security Professional</p>
+        <p>&copy; 2024 Dinesh M | SOC Analyst</p>
     </footer>
 
 </body>
