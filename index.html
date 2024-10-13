@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinesh M | SOC Analyst</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -15,12 +16,14 @@
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: #333;
+            overflow-x: hidden;
         }
         header {
             background-color: #0d2538;
             color: white;
             text-align: center;
             padding: 60px 20px;
+            animation: slideIn 1.5s ease-out forwards;
         }
         header h1 {
             font-size: 40px;
@@ -31,6 +34,9 @@
         nav {
             background-color: #0d2538;
             padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav ul {
             display: flex;
@@ -46,6 +52,10 @@
             font-size: 18px;
             text-transform: uppercase;
             font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffd700;
         }
         section {
             padding: 60px 20px;
@@ -58,6 +68,17 @@
             margin-bottom: 40px;
             color: #0d2538;
             text-transform: uppercase;
+            position: relative;
+        }
+        h2::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background: #ffd700;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
         }
         .container {
             display: flex;
@@ -71,10 +92,30 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+        }
+        .content-box.show {
+            transform: translateY(0);
+            opacity: 1;
         }
         .content-box h3 {
             color: #0d2538;
             margin-bottom: 15px;
+        }
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #0d2538;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ffd700;
         }
         footer {
             background-color: #0d2538;
@@ -86,6 +127,11 @@
             color: white;
             text-decoration: none;
             font-weight: 600;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-100%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
@@ -107,13 +153,16 @@
         </ul>
     </nav>
 
+    <!-- Profile Section -->
     <section id="profile">
         <h2>Profile</h2>
-        <div class="container">
-            <div class="content-box">
-                <h3>Professional Summary</h3>
-                <p>Experienced SOC Analyst with expertise in threat intelligence, incident response, and SIEM tools (AlienVault, Wazuh, Helix). Proven ability to analyze and interpret security logs, identifying and mitigating security threats for effective system protection.</p>
-            </div>
+        <p>Hello! I'm Dinesh M, an experienced SOC Analyst with a deep understanding of cybersecurity principles, threat detection, and response using advanced SIEM tools. I specialize in monitoring, analyzing, and mitigating security threats in real-time.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.telegram.com/yourprofile" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/yourwhatsapplink" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </section>
 
@@ -122,7 +171,7 @@
         <div class="container">
             <div class="content-box">
                 <h3>Technical Skills</h3>
-                <p>SIEM: AlienVault, Wazuh | Incident Response | Threat Intelligence | Log Analysis | Vulnerability Assessment | Network Security | Cybersecurity Frameworks.</p>
+                <p>SIEM: AlienVault, Wazuh, LogSign, Trellix | Incident Response | Phishing Mail & E-mail security | Log & Malware  Analysis | Vulnerability Assessment | Network Security | Cybersecurity Frameworks.</p>
             </div>
         </div>
     </section>
@@ -131,11 +180,12 @@
         <h2>Experience</h2>
         <div class="container">
             <div class="content-box">
-                <h3>SOC Analyst - DigitalTrack Solutions</h3>
-                <p>2023 - Present</p>
+                <h3>SOC Analyst - DigitalTrack Solutions pvt ltd </h3>
+                <p>2023 Jan - Present</p>
                 <ul>
                     <li>Monitored network traffic and analyzed logs for potential security threats.</li>
                     <li>Investigated incidents involving malware, phishing, and unauthorized access.</li>
+                    <li>vulnerability assessments and Collaborated with internal teams to improve system performance and enhance overall security posture of the organization's infrastructure.</li>
                 </ul>
             </div>
         </div>
@@ -146,7 +196,7 @@
         <div class="container">
             <div class="content-box">
                 <h3>B.Sc Networking</h3>
-                <p>2019 - 2022 | XYZ University</p>
+                <p>2019 - 2022 |Subbalakshmi Lakshmipathy College of Science </p>
             </div>
         </div>
     </section>
@@ -160,6 +210,7 @@
                     <li>Certified Ethical Hacker (CEH - EC-Council)</li>
                     <li>NSE1 & NSE2 Network Security Associate (Fortinet)</li>
                     <li>International Cybersecurity Institute Certified (ICSI)</li>
+                    <li>Digital Forensics Essentials (EC -Council)</li>
                 </ul>
             </div>
         </div>
@@ -180,6 +231,21 @@
     <footer>
         <p>&copy; 2024 Dinesh M | SOC Analyst</p>
     </footer>
+
+    <script>
+        // Add animation to reveal content as you scroll
+        const boxes = document.querySelectorAll('.content-box');
+        window.addEventListener('scroll', checkBoxes);
+        function checkBoxes() {
+            const triggerBottom = window.innerHeight * 0.8;
+            boxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top;
+                if (boxTop < triggerBottom) {
+                    box.classList.add('show');
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
